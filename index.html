@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Japanese Restaurant Delivery</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="./Logojp2edit.png" />  
+  </head>
+  <body>
+    <div class="container">
+      <header class="topo">
+        <h1>🍜Japanese Restaurant</h1>
+        <p class="subtitulo">O melhor da culinária japonesa no Brasil! Somos o top 1 dos restaurantes de culinária japonesa do BRASIL!</p><br />
+      </header>
+
+      
+      <section class="banner">
+        <img src="./img/Restaurante Japonês.png" alt="Sushi e comida japonesa na mesa" />
+        <div class="banner-texto">
+          <h1>Conheça nosso restaurante</h1>
+          <p>Temos o melhor da culinária japonesa, Sushi, Lámen, Onigiri e muito mais! 🍜🍣</p>
+        </div>
+      </section>
+
+      <section class="card">
+        <label for="entidade">Escolha a entidade</label>
+        <select id="entidade">
+          <option value="clientes">Clientes</option>
+          <option value="pedidos">Pedidos</option>
+          <option value="atendentes">Atendentes</option>
+        </select>
+
+        <div class="acoes-topo">
+          <button id="btnListar">Listar todos</button>
+        </div>
+      </section>
+
+      <section class="grid-duplo">
+        <div class="card">
+          <h2>Buscar por ID</h2>
+          <label for="buscarId">ID</label>
+          <input type="number" id="buscarId" placeholder="Digite o ID" />
+          <button id="btnBuscarId">Buscar por ID</button>
+        </div>
+
+        <div class="card">
+          <h2 id="tituloBusca">Buscar por Nome</h2>
+          <label for="buscarNome">Nome</label>
+          <input type="text" id="buscarNome" placeholder="Digite o nome" />
+          <button id="btnBuscarNome">Buscar por Nome</button>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Adicionar / Atualizar / Deletar</h2>
+
+        <label for="idRegistro">ID do registro</label>
+        <input
+          type="number"
+          id="idRegistro"
+          placeholder="Para atualizar ou deletar. Ao sair do campo, os dados serão carregados."
+        />
+
+        <div id="formularioDinamico" class="grid-formulario"></div>
+
+        <div class="botoes-formulario">
+          <button id="btnAdicionar">Adicionar</button>
+          <button id="btnAtualizar">Atualizar</button>
+          <button id="btnDeletar" class="btn-danger">Deletar</button>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Tabela de Resultados</h2>
+        <div id="tabelaWrapper" class="tabela-wrapper">
+          <p class="sem-dados">Nenhum dado carregado.</p>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Mensagem</h2>
+        <div id="mensagem" class="mensagem neutra">Aguardando ação...</div>
+      </section>
+
+      <section class="card">
+        <h2>Resultado JSON (debug)</h2>
+        <pre id="resultado">Nenhum dado carregado.</pre>
+      </section>
+
+      <footer class="rodape">
+        Projeto Final do "Aluno Kaiky Ferreira da Silva" do Curso de Programador
+        BackEnd do Senai Maracanã 2026 - T.59/60 - Abril/2026 Prof Anthony
+        Freitas
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
