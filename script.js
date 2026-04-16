@@ -271,15 +271,18 @@ function renderTabela(dados) {
   const entidade = getEntidadeSelecionada();
 
   if (entidade === "clientes") {
-    html += `
+  html += `
     <th>ID</th>
     <th>Nome</th>
     <th>Telefone</th>
     <th>Email</th>
-    <th>Cidade</th>
+    <th>Rua</th>
+    <th>Número</th>
     <th>Bairro</th>
+    <th>Cidade</th>
+    <th>Complemento</th>
   `;
-  }
+}
 
   if (entidade === "atendentes") {
     html += `
@@ -297,6 +300,7 @@ function renderTabela(dados) {
     <th>Status</th>
     <th>Pagamento</th>
     <th>Valor</th>
+    <th>Observação</th>
     <th>Cliente</th>
     <th>Atendente</th>
   `;
@@ -313,8 +317,11 @@ function renderTabela(dados) {
     <td>${item.nome ?? ""}</td>
     <td>${item.telefone ?? ""}</td>
     <td>${item.email ?? ""}</td>
-    <td>${item.cidade ?? ""}</td>
+    <td>${item.rua ?? ""}</td>
+    <td>${item.numero ?? ""}</td>
     <td>${item.bairro ?? ""}</td>
+    <td>${item.cidade ?? ""}</td>
+    <td>${item.complemento ?? ""}</td>
   `;
 }
 
@@ -334,6 +341,7 @@ if (entidade === "pedidos") {
     <td>${item.statusPedido ?? ""}</td>
     <td>${item.formaPagamento ?? ""}</td>
     <td>${item.valorTotal ?? ""}</td>
+    <td>${item.observacao ?? ""}</td>
     <td>${item.cliente?.nome ?? "-"}</td>
     <td>${item.atendente?.nome ?? "-"}</td>
   `;
